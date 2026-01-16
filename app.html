@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | VALM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-body">
+    <aside class="sidebar">
+        <div class="brand">VALM</div>
+        <nav>
+            <ul>
+                <li class="active">Active Shipments</li>
+                <li>Vault Inventory</li>
+                <li>Climate Reports</li>
+                <li>Settings</li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="content">
+        <header class="app-header">
+            <h2>Active Shipments</h2>
+            <div class="stats">
+                <div class="stat-card">Total Assets: <span id="total-count">2</span></div>
+                <div class="stat-card">Insured Value: <span id="total-value">$0.00</span></div>
+            </div>
+        </header>
+        <section class="inventory-section">
+            <div class="controls">
+                <input type="text" id="search" placeholder="Search inventory (Non-functional TODO)">
+                <button id="add-item-btn" class="btn-primary">+ Register Asset</button>
+            </div>
+            <table id="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Asset ID</th>
+                        <th>Title / Artist</th>
+                        <th>Status</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#VA-9021</td>
+                        <td>'Untitled 4' - Rothko</td>
+                        <td><span class="status-tag">In Transit</span></td>
+                        <td>$4,500,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
