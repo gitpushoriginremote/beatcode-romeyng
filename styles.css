@@ -1,0 +1,95 @@
+:root {
+    --gold: #c5a059;
+    --slate: #1a1a1a;
+    --off-white: #f4f4f4;
+    --border: #333;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--off-white);
+    color: var(--slate);
+}
+
+.landing-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    background: white;
+}
+
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    color: white;
+}
+
+/* APP LAYOUT - FIXED SIDEBAR BUG ON MOBILE */
+.app-body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: var(--slate);
+    color: white;
+    padding: 2rem;
+    flex-shrink: 0; /* BUG: This should be fixed/responsive, currently breaks on mobile screens */
+}
+
+.content {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    padding: 1rem;
+    background: white;
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.status-tag {
+    background: #e0f2f1;
+    color: #00796b;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
